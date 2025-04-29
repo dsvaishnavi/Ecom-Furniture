@@ -48,6 +48,7 @@ export const Carousel = () => {
                       from-amber-900 
                       to-amber-600
                       text-white 
+                      
                       font-semibold 
                       px-4 
                       py-2.5 
