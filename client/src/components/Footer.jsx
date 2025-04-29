@@ -140,6 +140,45 @@ export const Footer = () => {
           </div>
         </div>
 
+        <div className="mt-8 border-t border-[#b58d4d] pt-6">
+          <div className="flex justify-center space-x-4">
+            <a
+              href="#"
+              className="text-[#f5e8d0] hover:text-white transition"
+            >
+              Privacy Policy
+            </a>
+            <span className="text-[#f5e8d0]">|</span>
+            <a
+              href="#"
+              className="text-[#f5e8d0] hover:text-white transition"
+            >
+              Terms of Service
+            </a>
+            <span className="text-[#f5e8d0]">|</span>
+            <a
+              href="#"
+              className="text-[#f5e8d0] hover:text-white transition"
+            >
+              Returns & Exchanges
+            </a>
+            <span className="text-[#f5e8d0]">|</span>
+            <a
+              href="#"
+              className="text-[#f5e8d0] hover:text-white transition"
+            >
+              Shipping Information
+            </a>
+            <span className="text-[#f5e8d0]">|</span>
+            <a
+              href="#"
+              className="text-[#f5e8d0] hover:text-white transition"
+            >
+              FAQs
+            </a>
+          </div>
+        </div>
+
         {/* Copyright */}
         <div className="mt-8 pt-6 border-t border-[#b58d4d] text-center text-[#f5e8d0] text-sm">
           © {new Date().getFullYear()} Royal Furnishings. All rights reserved by Vaishnavi Dhawade and Satyajeet desai team.

@@ -1,0 +1,67 @@
+{
+    "categories": [
+        {
+            "id" : 1,
+            "name" : "Dining Room",
+            "image" : "https://images.unsplash.com/photo-1616486886892-ff366aa67ba4?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "description" : "Explore our exquisite collection of dining room furniture, designed to elevate your dining experience. From elegant dining tables to stylish chairs, find the perfect pieces to create a warm and inviting atmosphere for family gatherings and entertaining guests."
+        },
+        {
+            "id" : 2,
+            "name" : "Living Room",
+            "image" : "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?q=80&w=2158&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "description" : "Transform your living room into a stylish and comfortable haven with our curated selection of furniture. From cozy sofas to chic coffee tables, discover the perfect pieces to create a welcoming space for relaxation and entertainment."
+        },
+        {
+            "id" : 3,
+            "name" : "Bedroom",
+            "image" : "https://images.unsplash.com/photo-1615874959474-d609969a20ed?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "description" : "Create your dream bedroom with our stunning range of bedroom furniture. From luxurious bed frames to stylish nightstands, find everything you need to design a serene and inviting sanctuary for restful nights and rejuvenating mornings."            
+        },
+        {
+            "id" : 4,
+            "name" : "Office",
+            "image" : "https://images.unsplash.com/photo-1616486886892-ff366aa67ba4?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "description" : "Enhance your productivity with our functional and stylish office furniture collection. From ergonomic desks to comfortable chairs, find the perfect pieces to create a productive workspace that inspires creativity and focus."
+        }
+        ,
+        {
+            "id" : 5,
+            "name" : "Outdoor",
+            "image" : "https://images.unsplash.com/photo-1616486886892-ff366aa67ba4?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "description" : "Elevate your outdoor spaces with our stylish outdoor furniture collection. From comfortable patio sets to elegant garden benches, create a welcoming atmosphere for relaxation and entertainment in your backyard or patio."
+        },
+        
+        {
+            "id" : 6,
+            "name" : "Storage",
+            "image" : "https://images.unsplash.com/photo-1616486886892-ff366aa67ba4?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "description" : "Maximize your space with our versatile storage furniture collection. From stylish cabinets to functional shelving units, find the perfect solutions to keep your home organized and clutter-free."
+        },
+        {
+            "id" : 7,
+            "name" : "Decor",
+            "image" : "https://images.unsplash.com/photo-1616486886892-ff366aa67ba4?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "description" : "Add the finishing touches to your home with our decorative furniture collection. From stylish accent pieces to unique wall art, discover the perfect items to express your personal style and enhance your living spaces."
+        },
+        {
+            "id" : 8,
+            "name" : "Lighting",
+            "image" : "https://images.unsplash.com/photo-1616486886892-ff366aa67ba4?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "description" : "Illuminate your home with our stylish lighting furniture collection. From elegant chandeliers to modern floor lamps, find the perfect lighting solutions to create ambiance and enhance the beauty of your spaces."
+        }
+        ,
+        {
+            "id" : 9,
+            "name" : "Accessories",
+            "image" : "https://images.unsplash.com/photo-1616486886892-ff366aa67ba4?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "description" : "Explore our unique accessories collection, featuring decorative items and functional pieces that add character and charm to your home. Discover the perfect accessories to complement your furniture and enhance your living spaces."
+        },
+        {
+            "id" : 10,
+            "name" : "Kids",
+            "image" : "https://images.unsplash.com/photo-1616486886892-ff366aa67ba4?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "description" : "Discover our delightful kids' furniture collection, designed to create fun and functional spaces for your little ones. From colorful beds to playful storage solutions, find the perfect pieces to inspire creativity and imagination in their rooms."
+        }
+    ]
+}
