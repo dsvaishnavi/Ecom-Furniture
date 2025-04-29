@@ -38,7 +38,7 @@ export const Header = () => {
         </div>
 
         {/* Navigation items on the right */}
-        <div className="flex items-center space-x-15">
+        <div className="flex items-center space-x-11">
           <Link
             to="/home"
             className="text-gray-700 text-2xl hover:text-blue-600 transition"
