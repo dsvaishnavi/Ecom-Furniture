@@ -1,7 +1,7 @@
 export const SignIn = () => {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-[#f5e8d0] mb-20 w-full">
-      <div className="flex items-center justify-center mb-8">
+    <div className="flex flex-col items-center justify-center h-200 bg-[#f5e8d0] w-full">
+      <div className="flex items-center justify-center mb-05 mt-20">
         <img
           src="./1.png"
           alt="Logo"

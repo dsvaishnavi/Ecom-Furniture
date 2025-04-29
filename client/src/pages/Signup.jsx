@@ -13,7 +13,7 @@ export const Signup = () => {
                 </div>
                 <h1 className="text-4xl font-bold text-center mt-10">Welcome Back!</h1>
                 <p className="text-lg text-gray-600 text-center mt-2 mb-6">
-                    Please SignUp to Create account to continue.
+                    Create account to continue.
                 </p>
                 <form>
                     <div className="mb-4">
@@ -62,12 +62,12 @@ export const Signup = () => {
                     </div>
                     <div className="mb-6">
                         <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="phone">
-                            Phone Number
+                            Mobile Number
                         </label>
                         <input
                             type="tel"
                             id="phone"
-                            placeholder="Enter your phone number"
+                            placeholder="Enter your mobile number"
                             className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                         />
                     </div>
@@ -151,12 +151,12 @@ export const Signup = () => {
                         </button>
                     </div>
                 </form>
-                <p className="text-center text-gray-500 text-xs mt-4">
+                <p className="text-center text-gray-600 text-xs mt-4">
                     &copy;2023 UrbanNest. All rights reserved.
                 </p>
-                <p className="text-center text-gray-500 text-xs mt-4">
+                <p className="text-center text-gray-600 text-xs mt-4">
                     Already have an account?{" "}
-                    <a href="/SignIn" className="text-blue-600 hover:text-blue-800">
+                    <a href="/SignIn"  className="text-[#917337] font-bold hover:underline">
                         Sign In
                     </a>
                 </p>
