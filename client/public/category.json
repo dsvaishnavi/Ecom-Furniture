@@ -2,66 +2,81 @@
     "categories": [
         {
             "id" : 1,
-            "name" : "Dining Room",
-            "image" : "https://images.unsplash.com/photo-1616486886892-ff366aa67ba4?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            "description" : "Explore our exquisite collection of dining room furniture, designed to elevate your dining experience. From elegant dining tables to stylish chairs, find the perfect pieces to create a warm and inviting atmosphere for family gatherings and entertaining guests."
+            "name" : "Dining Table",
+            "image" : "https://img.freepik.com/premium-photo/table-with-four-chairs-table-with-four-chairs_849875-28.jpg?w=826",
+            "description" : "Elevate your dining experience with our exquisite dining table collection. From elegant wooden designs to modern glass options, find the perfect centerpiece for your dining room that combines style and functionality."
         },
         {
             "id" : 2,
-            "name" : "Living Room",
-            "image" : "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?q=80&w=2158&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            "description" : "Transform your living room into a stylish and comfortable haven with our curated selection of furniture. From cozy sofas to chic coffee tables, discover the perfect pieces to create a welcoming space for relaxation and entertainment."
+            "name" : "Furniture",
+            "image" : "https://static.vecteezy.com/system/resources/thumbnails/032/384/976/small/furniture-on-white-background-ai-generative-photo.jpg",
+            "description" : "Discover our diverse furniture collection, featuring stylish and functional pieces for every room in your home. From contemporary sofas to classic armchairs, find the perfect furniture to enhance your living spaces."
         },
         {
             "id" : 3,
-            "name" : "Bedroom",
-            "image" : "https://images.unsplash.com/photo-1615874959474-d609969a20ed?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            "description" : "Create your dream bedroom with our stunning range of bedroom furniture. From luxurious bed frames to stylish nightstands, find everything you need to design a serene and inviting sanctuary for restful nights and rejuvenating mornings."            
+            "name" : "Sofa",
+            "image" : "https://img.freepik.com/free-vector/red-leather-sofa-realistic-illustration_1284-12133.jpg?t=st=1745961205~exp=1745964805~hmac=0999f0e72ff0ef3e1a3a081e900e41c1c71e0a1bbdbd44da8d2ddccf7337d2c2&w=1060",
+            "description" : "Transform your living room with our stylish sofa collection. From cozy sectionals to elegant loveseats, find the perfect seating solutions that combine comfort and style for your home."
         },
         {
             "id" : 4,
-            "name" : "Office",
-            "image" : "https://images.unsplash.com/photo-1616486886892-ff366aa67ba4?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            "description" : "Enhance your productivity with our functional and stylish office furniture collection. From ergonomic desks to comfortable chairs, find the perfect pieces to create a productive workspace that inspires creativity and focus."
-        }
-        ,
+            "name" : "Chair",
+            "image" : "https://img.freepik.com/premium-photo/old-vintage-chair_102671-4488.jpg?w=740",
+            "description" : "Discover our stylish chair collection, featuring a variety of designs to suit any space. From modern dining chairs to comfortable accent chairs, find the perfect seating options to enhance your home decor."
+        },
         {
             "id" : 5,
-            "name" : "Outdoor",
-            "image" : "https://images.unsplash.com/photo-1616486886892-ff366aa67ba4?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            "description" : "Elevate your outdoor spaces with our stylish outdoor furniture collection. From comfortable patio sets to elegant garden benches, create a welcoming atmosphere for relaxation and entertainment in your backyard or patio."
+            "name" : "Bed",
+            "image" : "https://img.freepik.com/premium-photo/png-bed-canopy-furniture-white-background-relaxation_53876-885831.jpg?w=740",
+            "description" : "Create your dream bedroom with our stunning bed collection. From luxurious king-size beds to stylish platform designs, find the perfect centerpiece for your bedroom that combines comfort and elegance."
         },
-        
         {
             "id" : 6,
-            "name" : "Storage",
-            "image" : "https://images.unsplash.com/photo-1616486886892-ff366aa67ba4?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            "description" : "Maximize your space with our versatile storage furniture collection. From stylish cabinets to functional shelving units, find the perfect solutions to keep your home organized and clutter-free."
+            "name" : "Table",
+            "image" : "https://img.freepik.com/premium-photo/png-table-furniture-wood-cup_53876-778391.jpg?w=740",
+            "description" : "Explore our versatile table collection, featuring a variety of styles for every room. From elegant coffee tables to functional side tables, find the perfect pieces to enhance your living spaces."
         },
         {
             "id" : 7,
-            "name" : "Decor",
-            "image" : "https://images.unsplash.com/photo-1616486886892-ff366aa67ba4?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            "description" : "Add the finishing touches to your home with our decorative furniture collection. From stylish accent pieces to unique wall art, discover the perfect items to express your personal style and enhance your living spaces."
+            "name" : "Cabinet",
+            "image" : "https://img.freepik.com/premium-photo/png-cabinet-clean-minimal-modern-furniture-sideboard-architecture_53876-684094.jpg?w=740",
+            "description" : "Discover our stylish cabinet collection, designed to provide both storage and aesthetic appeal. From modern designs to classic styles, find the perfect cabinets to organize and beautify your home."
         },
         {
             "id" : 8,
-            "name" : "Lighting",
-            "image" : "https://images.unsplash.com/photo-1616486886892-ff366aa67ba4?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            "description" : "Illuminate your home with our stylish lighting furniture collection. From elegant chandeliers to modern floor lamps, find the perfect lighting solutions to create ambiance and enhance the beauty of your spaces."
-        }
-        ,
+            "name" : "Desk",
+            "image" : "https://img.freepik.com/premium-photo/png-desk-furniture-computer-laptop_53876-876357.jpg?w=740",
+            "description" : "Enhance your workspace with our stylish desk collection. From modern office desks to elegant writing tables, find the perfect pieces to create a productive and inspiring environment."
+        },
         {
             "id" : 9,
-            "name" : "Accessories",
-            "image" : "https://images.unsplash.com/photo-1616486886892-ff366aa67ba4?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            "description" : "Explore our unique accessories collection, featuring decorative items and functional pieces that add character and charm to your home. Discover the perfect accessories to complement your furniture and enhance your living spaces."
+            "name" : "Shelf",
+            "image" : "https://img.freepik.com/premium-photo/png-bookcase-bookcase-furniture-bookshelf_53876-862987.jpg?w=740",
+            "description" : "Maximize your space with our stylish shelf collection. From wall-mounted designs to freestanding units, find the perfect shelving solutions to display your decor and keep your home organized."
         },
         {
             "id" : 10,
-            "name" : "Kids",
-            "image" : "https://images.unsplash.com/photo-1616486886892-ff366aa67ba4?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            "description" : "Discover our delightful kids' furniture collection, designed to create fun and functional spaces for your little ones. From colorful beds to playful storage solutions, find the perfect pieces to inspire creativity and imagination in their rooms."
+            "name" : "Storage",
+            "image" : "https://img.freepik.com/premium-photo/png-file-cabinet-furniture-drawer-organization_53876-927010.jpg?w=740",
+            "description" : "Discover our versatile storage collection, featuring stylish solutions for every room. From elegant cabinets to functional bins, find the perfect pieces to keep your home organized and clutter-free."
+        },
+        {
+            "id" : 11,
+            "name" : "Decor",
+            "image" : "https://img.freepik.com/free-psd/frame-studio_23-2151840028.jpg?t=st=1745962179~exp=1745965779~hmac=845923e3217f5acc3c656ea1d3a8019f5ccc3a3b2c46fe5eb22c2e9f6ca75cb4&w=1380",
+            "description" : "Elevate your home with our stunning decor collection. From elegant vases to stylish wall art, find the perfect pieces to add personality and charm to your living spaces."
+        },
+        {
+            "id" : 12,
+            "name" : "Lighting",
+            "image" : "https://img.freepik.com/premium-photo/png-lamp-lampshade-table-lamp_53876-814494.jpg?w=740",
+            "description" : "Illuminate your home with our stylish lighting collection. From modern pendant lights to elegant floor lamps, find the perfect fixtures to create a warm and inviting atmosphere."
+        },
+        {
+            "id":13,
+            "name" : "Stool",
+            "image" : "https://img.freepik.com/premium-photo/png-modern-white-bar-stool-design_53876-699699.jpg?w=740",
+            "description" : "Discover our stylish stool collection, featuring versatile designs for every space. From modern bar stools to comfortable accent stools, find the perfect seating options to enhance your home decor."
         }
     ]
 }
