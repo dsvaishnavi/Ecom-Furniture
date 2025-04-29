@@ -142,7 +142,7 @@ export const Footer = () => {
 
         {/* Copyright */}
         <div className="mt-8 pt-6 border-t border-[#b58d4d] text-center text-[#f5e8d0] text-sm">
-          © {new Date().getFullYear()} Royal Furnishings. All rights reserved.
+          © {new Date().getFullYear()} Royal Furnishings. All rights reserved by Vaishnavi Dhawade and Satyajeet desai team.
         </div>
       </div>
     </footer>

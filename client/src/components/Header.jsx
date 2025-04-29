@@ -9,7 +9,14 @@ export const Header = () => {
     <nav className="bg-white shadow-md py-3 fixed top-0 left-0 right-0 z-50">
       <div className="container mx-auto px-4 flex justify-between items-center">
         {/* Logo on the left */}
-        <Link to="/" className="text-3xl font-bold text-[#917337] ">
+        
+          
+        <Link to="/home" className="text-3xl font-bold text-[#917337] flex items-center ">
+        <img
+            src="./1.png"
+            alt="Logo"
+            className="h-10 w-10 mr-2 rounded-full"
+          /> 
           UrbanNest
         </Link>
 
@@ -38,7 +45,7 @@ export const Header = () => {
         </div>
 
         {/* Navigation items on the right */}
-        <div className="flex items-center space-x-15">
+        <div className="flex items-center space-x-11">
           <Link
             to="/home"
             className="text-gray-700 text-2xl hover:text-blue-600 transition"
@@ -64,10 +71,26 @@ export const Header = () => {
             <FaUser />
           </Link>
           <Link
-            to="/login"
-            className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition"
+            to="/SignIn"
+            className="bg-gradient-to-b 
+                      from-amber-900 
+                      to-amber-600
+                      text-white 
+                      font-semibold 
+                      px-4 
+                      py-2.5 
+                      rounded-2xl 
+                      shadow-md
+                      hover:scale-105 
+                      hover:shadow-lg
+                      active:scale-95
+                      transition-all 
+                      duration-200
+                      focus:outline-none 
+                      focus:ring-2 
+                      focus:ring-white"
           >
-            Login
+            SignIn
           </Link>
         </div>
       </div>

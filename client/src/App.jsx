@@ -4,8 +4,9 @@ import { Shop } from "./pages/Shop";
 import { Applayout } from "./components/Layout/Applayout";
 import { ErrorPage } from "./pages/ErrorPage";
 import { Profile } from "./pages/Profile";
-import { Login } from "./pages/Login";
+import { SignIn } from "./pages/SignIn";
 import { Home } from "./pages/Home";
+import { Signup } from "./pages/Signup";
 
 const router = createBrowserRouter([
   {
@@ -27,8 +28,12 @@ const router = createBrowserRouter([
         element: <CartPage />,
       },
       {
-        path: "login",
-        element: <Login />,
+        path: "SignIn",
+        element: <SignIn />,
+      },
+      {
+        path: "signup",
+        element: <Signup />,
       },
       {
         path: "home",
@@ -42,7 +47,6 @@ const App = () => {
   return (
     <>
       <RouterProvider router={router}> </RouterProvider>;
-      
     </>
   );
 };
