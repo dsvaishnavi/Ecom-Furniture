@@ -36,7 +36,7 @@ const router = createBrowserRouter([
         element: <Signup />,
       },
       {
-        path: "home",
+        path: "/",
         element: <Home />,
       },
     ],
@@ -47,6 +47,7 @@ const App = () => {
   return (
     <>
       <RouterProvider router={router}> </RouterProvider>;
+      
     </>
   );
 };
