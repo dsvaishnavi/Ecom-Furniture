@@ -2,7 +2,6 @@
 import { Outlet } from "react-router-dom";
 import { Header } from "../Header";
 import { Footer } from "../Footer";
-import { Home } from "../../pages/Home";
 
 export const Applayout = () => {
   return (
@@ -10,7 +9,7 @@ export const Applayout = () => {
       <Header />
 
       {/* Add pt-[header-height] to push content down */}
-      <main className=" pt-20 bg-[#f5e8d0] ">
+      <main className=" pt-20 ">
         <Outlet />
       </main>
 
