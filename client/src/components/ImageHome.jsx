@@ -23,13 +23,13 @@ export const ImageHome = () => {
         </h1>   
       </div>
 
-      <div className=" md:columns-3 lg:columns-5 gap-4 p-4">
+      <div className=" md:columns-3 lg:columns-5 gap-4 p-4 ">
         {images.map((img) => (
           <img
             key={img.id}
             src={img.urls.small}
             alt={img.alt_description || "Random Unsplash"}
-            className="mb-3  w-full  rounded-lg hover:scale-105 transition duration-200 ease-in "
+            className="mb-3  w-full  rounded-sm hover:scale-105 transition duration-200 ease-in "
           />
         ))}
       </div>
