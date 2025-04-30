@@ -11,7 +11,7 @@ export const Applayout = () => {
      
 
       {/* Add pt-[header-height] to push content down */}
-      <main className="flex-grow pt-20 bg-[#f5e8d0]">
+      <main className="flex-grow pt-20 bg-[#f5e8d0] ">
         {" "}
         {/* Adjust pt-20 based on your header height */}
         <Outlet />

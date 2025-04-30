@@ -134,12 +134,10 @@ export const Footer = () => {
                   Custom Orders
                 </a>
               </li>
-              
-              
+            
             </ul>
           </div>
         </div>
-
         <div className="mt-8 border-t border-[#b58d4d] pt-6">
           <div className="flex justify-center space-x-4">
             <a
@@ -180,8 +178,8 @@ export const Footer = () => {
         </div>
 
         {/* Copyright */}
-        <div className="mt-8 pt-6 border-t border-[#b58d4d] text-center text-[#f5e8d0] text-sm">
-          © {new Date().getFullYear()} Royal Furnishings. All rights reserved by Vaishnavi Dhawade and Satyajeet desai team.
+        <div className="mt-5 pt-6 border-t border-[#b58d4d] text-center text-[#f5e8d0] text-sm">
+          © {new Date().getFullYear()} Royal Furnishings. All rights reserved by Coders Paradise Group.
         </div>
       </div>
     </footer>
