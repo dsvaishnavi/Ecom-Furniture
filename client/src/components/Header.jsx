@@ -7,10 +7,7 @@ import { IoHomeSharp } from "react-icons/io5";
 export const Header = () => {
   return (
     <nav className="bg-white shadow-md py-3 fixed top-0 left-0 right-0 z-50">
-      <div className="container mx-auto px-4 flex justify-between items-center">
-        {/* Logo on the left */}
-        
-          
+      <div className="container mx-auto px-4 flex justify-between items-center">    
         <Link to="/home" className="text-3xl font-bold text-[#917337] flex items-center ">
         <img
             src="./1.png"
