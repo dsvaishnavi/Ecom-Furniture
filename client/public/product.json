@@ -1,0 +1,52 @@
+{
+    "material":[
+        {
+            "id": 1,
+            "title": "Table",
+            "price": 599.00,
+            "description": "Solid wood dining table with a polished mahogany finish, comfortably seats six people.",
+            "category": "table",
+            "image": "https://www.eastlifestyle.in/cdn/shop/files/ClassicRoundDiningTable1657_6.jpg?v=1724765331"
+        },
+        {
+            "id": 2,
+            "title": "Chair",
+            "price": 199.99,
+            "description": "Sleek and modern coffee table with a smooth walnut finish, ideal for minimal living rooms.",
+            "category": "chair",
+            "image": "https://i.pinimg.com/736x/f6/18/14/f61814e61c58ff37067f52a6cf97f085.jpg"
+        },
+        {
+            "id": 3,
+            "title": "Armchair",
+            "price": 149.99,
+            "description": "A handcrafted armchair made of solid oak wood, perfect for rustic or farmhouse interiors.",
+            "category": "armchair",
+            "image": "https://pritihome.com/wp-content/uploads/2024/05/4-9.webp"
+        },
+        {
+            "id": 4,
+            "title": "Bookshelf",
+            "price": 249.00,
+            "description": "Elegant bookshelf made from reclaimed teak wood, featuring 4 spacious shelves.",
+            "category": "bookshelf",
+            "image": "https://m.media-amazon.com/images/I/71IYyDFg3BL.jpg"
+        },
+        {
+            "id": 5,
+            "title": "Bed Frame",
+            "price": 499.50,
+            "description": "A low-profile bed frame made of pine wood with a natural finish, perfect for modern bedrooms.",
+            "category": "bedframe",
+            "image": "https://m.media-amazon.com/images/I/81n107zkYRL._AC_UF350,350_QL80_.jpg"
+        },
+        {
+            "id": 6,
+            "title": "Wall Shelf",
+            "price": 79.99,
+            "description": "Floating wall shelf crafted from oak wood, adds style and storage to any room.",
+            "category": "wallshelf",
+            "image": "https://vibecrafts.com/cdn/shop/files/circle-shape-backlit-designer-wooden-wall-shelf-book-shelf-night-light_-oak-finish-WWSVC_62517_01.webp?v=1724959064&width=1100"
+        }
+    ]
+}
