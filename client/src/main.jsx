@@ -5,14 +5,12 @@ import App from "./App.jsx";
 import { DataProvider } from "./context/DataContext.jsx";
 import { CategoryProvider } from "./context/CategoryContext.jsx";
 
-
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-      <CategoryProvider>
-        <DataProvider>
-          <App />
-        </DataProvider>
-      </CategoryProvider>
+    <CategoryProvider>
+      <DataProvider>
+        <App />
+      </DataProvider>
+    </CategoryProvider>
   </StrictMode>
 );
-  
