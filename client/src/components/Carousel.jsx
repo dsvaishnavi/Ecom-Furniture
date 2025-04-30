@@ -11,8 +11,8 @@ export const Carousel = () => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: true,          // Enable auto-play
-    autoplaySpeed: 3000,     // Set the speed for auto-slide (3000ms = 3 seconds)
+    autoplay: true, // Enable auto-play
+    autoplaySpeed: 3000, // Set the speed for auto-slide (3000ms = 3 seconds)
   };
 
   const { data, fetchProduct } = useContext(DataContext);
@@ -34,7 +34,8 @@ export const Carousel = () => {
               <div className="flex gap-10 justify-center h-[300px] items-center px-4 ">
                 <div className="space-y-5">
                   <h2 className="text-[#503320] font-bold px-10 font-sans text-3xl ">
-                    Discover your new <span className="text-[#fffaf5]">space !!</span> 
+                    Discover your new{" "}
+                    <span className="text-[#fffaf5]">space !!</span>
                   </h2>
                   <h1 className="text-2xl px-10 font-bold uppercase line-clamp-5 w-500px md:w-[900px] text-black">
                     {item.title}
@@ -78,7 +79,6 @@ export const Carousel = () => {
             </div>
           );
         })}
-      
       </Slider>
     </>
   );
