@@ -1,4 +1,4 @@
-import { use, useContext , useEffect } from "react";
+import {  useContext , useEffect } from "react";
 import { CategoryContext } from "../context/CategoryContext";
 
 
@@ -12,9 +12,9 @@ export const CategoryList = () => {
     }, []);
 
     return (
-        <div className="flex flex-col gap-5 mt-10 bg-[#ffff] flex-direction row h-200vh w-full justify-center items-center mb-10">
-            <h1 className="text-3xl font-bold text-[#523a28]">Our Products..</h1>
-            <div className="flex flex-wrap gap-5 justify-center">
+        <div className="flex flex-col gap-5 mt-10 bg-[#ffff] flex-direction row h-[500px] w-full justify-center items-center mb-4">
+            <h1 className="text-4xl font-bold text-[#523a28] mb-4">Our Products..</h1>
+            <div className="flex flex-wrap gap-[80px] justify-center">
                 {category?.map((item, index) => {
                     return (
                         <div key={index} className="flex flex-col items-center justify-center gap-2 ">
