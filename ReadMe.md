@@ -1,6 +1,9 @@
  # for backend to make a package.json file
  npm init -y
 
+ # if there is package.json is available then run this cmd
+ npm install
+
  # for express
  npm i express
 
