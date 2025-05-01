@@ -28,6 +28,7 @@ export const Signup = () => {
   // handle form submit
   const handleSubmit = async (e) => {
     e.preventDefault();
+    alert("Sign-up succesfull");
 
     try {
       const response = await fetch("http://localhost:3000/api/auth/signup", {
