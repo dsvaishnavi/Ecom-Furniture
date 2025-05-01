@@ -1,12 +1,34 @@
+import { useState } from "react";
+
 export const SignIn = () => {
+  const [login, setLogin] = useState({
+    username: "",
+    email: "",
+    password: "",
+  });
+
+  // handle input val
+  const handleinput = (e) => {
+    // console.log(e);
+    let name = e.target.name;
+    let value = e.target.value;
+
+    setLogin({
+      ...login,
+      [name]: value,
+    });
+  };
+
+  const handleloginSubmit = (e) => {
+    e.preventDefault();
+    
+    alert(login);
+  };
+
   return (
     <div className="flex flex-col items-center justify-center h-200 bg-[#f5e8d0] w-full">
       <div className="flex items-center justify-center mt-8">
-        <img
-          src="./1.png"
-          alt="Logo"
-          className="h-20 w-20 mr-2 rounded-full"
-        />
+        <img src="./1.png" alt="Logo" className="h-20 w-20 mr-2 rounded-full" />
         <h1 className="text-4xl font-bold  text-[#917337]">UrbanNest</h1>
       </div>
       <h1 className="text-4xl font-bold text-center mt-25">Welcome Back!</h1>
@@ -16,10 +38,16 @@ export const SignIn = () => {
 
       <form className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 w-full max-w-sm">
         <div className="mb-4">
-          <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="username">
+          <label
+            className="block text-gray-700 text-sm font-bold mb-2"
+            htmlFor="username"
+          >
             Username
           </label>
           <input
+            value={login.username}
+            onChange={handleinput}
+            name="username"
             className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             id="username"
             type="text"
@@ -27,10 +55,16 @@ export const SignIn = () => {
           />
         </div>
         <div className="mb-4">
-          <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">
+          <label
+            className="block text-gray-700 text-sm font-bold mb-2"
+            htmlFor="email"
+          >
             Email
           </label>
           <input
+            value={login.email}
+            onChange={handleinput}
+            name="email"
             className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             id="email"
             type="email"
@@ -38,10 +72,16 @@ export const SignIn = () => {
           />
         </div>
         <div className="mb-6">
-          <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="password">
+          <label
+            className="block text-gray-700 text-sm font-bold mb-2"
+            htmlFor="password"
+          >
             Password
           </label>
           <input
+            value={login.password}
+            onChange={handleinput}
+            name="password"
             className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
             id="password"
             type="password"
@@ -68,6 +108,7 @@ export const SignIn = () => {
             focus:ring-2 
             focus:ring-white"
             type="button"
+            onClick={handleloginSubmit}
           >
             SignIN
           </button>
@@ -92,7 +133,10 @@ export const SignIn = () => {
         <div className="flex items-center justify-between mt-4">
           <p className="text-gray-600 text-sm">
             Don't have an account?{" "}
-            <a href="/signup" className="text-[#917337] font-bold hover:underline">
+            <a
+              href="/signup"
+              className="text-[#917337] font-bold hover:underline"
+            >
               Sign Up
             </a>
           </p>
