@@ -1,5 +1,6 @@
 const { Usermodel } = require("../models/SignupModel");
 const bcrypt = require("bcrypt");
+const jwt = require("jsonwebtoken");
 
 const signup = async (req, res) => {
   try {
@@ -21,7 +22,7 @@ const signup = async (req, res) => {
       pin,
       state,
     });
-    Usermodel.password = await bcrypt.hash(password, 10);
+    data.password = await bcrypt.hash(password, 10);
     await Usermodel.save();
     console.log(username, password);
     res.json({
@@ -33,37 +34,38 @@ const signup = async (req, res) => {
 };
 // -----------------------------------------------------------------signin----------------------------------------------------------------------
 
-// const signin = async (req, res) => {
-//   try {
-//     const { username, email, password } =
-//       req.body;
-//     const user = await Usermodel.findOne({ email });
-//     const errorMsg ="wrong validation"
-//     if (!user) {
-//       return res
-//         .status(403)
-//         .json({ message: errorMsg, success: false });
-//     }
+const signin = async (req, res) => {
+  try {
+    const { email, password } = req.body;
+    const user = await Usermodel.findOne({ email });
+    const errorMsg = "wrong validation";
+    if (!user) {
+      return res.status(403).json({ message: errorMsg, success: false });
+    }
+    const isSame = await bcrypt.compare(password, user.password); //password is from client and user.pass from database
 
-//     const ispass =await bcrypt.compare(password,user.password);
-//     if (!ispass){
+    if (!isSame) {
+      return res.status(403).json({ message: errorMsg, success: false });
+    }
 
-//     }
-//     const data = await Usermodel.create({
-//       username,
-//       password,
-//       email,
+    // -----------------------------------------------------JWT TOKEN--------------------------------------------------------------------------------
+    const jwtToken = jwt.sign(
+      { email: user.email, _id: user._id },
+      process.env.JWT_SECRET,
+      { expiresIn: "24h" }
+    );
+    // -----------------------------------------------------------------------------------------------------------------------------------------------
 
-//     });
-//     Usermodel.password = await bcrypt.hash(password, 10);
-//     await Usermodel.save();
-//     console.log(username, password);
-//     res.json({
-//       message: "usersignup success",
-//     });
-//   } catch (error) {
-//     console.log(error);
-//   }
-// };
+    res.status(200).json({
+      message: "signIN successfull",
+      success: true,
+      jwtToken,
+      email,
+      name: user.username,
+    });
+  } catch (error) {
+    console.log(error);
+  }
+};
 
-module.exports = { signup };
+module.exports = { signup, signin };

@@ -30,21 +30,21 @@ const signupValidation = (req, res, next) => {
   next();
 };
 
-// const SigninValidation = (req, res, next) => {
-//   const Schema = Joi.object({
-//     username: Joi.string().min(4).max(10).required(),
-//     email: Joi.string().email().required(),
-//     password: Joi.string().min(4).max(20).required(),
-//   });
+const signinValidation = (req, res, next) => {
+  const Schema = Joi.object({
+    username: Joi.string().min(4).max(10).required(),
+    email: Joi.string().email().required(),
+    password: Joi.string().min(4).max(20).required(),
+  });
 
-//   const { error } = Schema.validate(req.body);
-//   if (error) {
-//     return res.status(400).json({ message: "Bad request", error });
-//   }
-//   next();
-// };
+  const { error } = Schema.validate(req.body);
+  if (error) {
+    return res.status(400).json({ message: "Bad request", error });
+  }
+  next();
+};
 
 module.exports = {
   signupValidation,
-  // SigninValidation,
+  signinValidation,
 };
