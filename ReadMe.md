@@ -23,3 +23,9 @@
  # cors-cross origin resource sharing
  server and client are on same port 
  --> npm i cors
+
+ # more download for authentication
+ npm i body-parser jsonwebtoken bcrypt
+
+ # for validation
+ npm i joi

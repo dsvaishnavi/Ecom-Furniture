@@ -1,19 +1,16 @@
-// home page
-
 const { Usermodel } = require("../models/SignupModel");
-
-const home = async (req, res) => {
-  try {
-    res.status(200).json("welcome using router and controller home");
-  } catch (error) {
-    console.log(error.message);
-  }
-};
+const bcrypt = require("bcrypt");
 
 const signup = async (req, res) => {
   try {
-    const { username, email, password, phone, address, city, pin, country } =
+    const { username, email, password, phone, address, city, pin, state } =
       req.body;
+    const user = await Usermodel.findOne({ email });
+    if (user) {
+      return res
+        .status(409)
+        .json({ message: "user already exist", success: false });
+    }
     const data = await Usermodel.create({
       username,
       password,
@@ -22,15 +19,51 @@ const signup = async (req, res) => {
       address,
       city,
       pin,
-      country,
+      state,
     });
-    // console.log(username, password);
+    Usermodel.password = await bcrypt.hash(password, 10);
+    await Usermodel.save();
+    console.log(username, password);
     res.json({
-      message: "usersignup",
+      message: "usersignup success",
     });
   } catch (error) {
     console.log(error);
   }
 };
+// -----------------------------------------------------------------signin----------------------------------------------------------------------
 
-module.exports = { home, signup };
+// const signin = async (req, res) => {
+//   try {
+//     const { username, email, password } =
+//       req.body;
+//     const user = await Usermodel.findOne({ email });
+//     const errorMsg ="wrong validation"
+//     if (!user) {
+//       return res
+//         .status(403)
+//         .json({ message: errorMsg, success: false });
+//     }
+
+//     const ispass =await bcrypt.compare(password,user.password);
+//     if (!ispass){
+
+//     }
+//     const data = await Usermodel.create({
+//       username,
+//       password,
+//       email,
+
+//     });
+//     Usermodel.password = await bcrypt.hash(password, 10);
+//     await Usermodel.save();
+//     console.log(username, password);
+//     res.json({
+//       message: "usersignup success",
+//     });
+//   } catch (error) {
+//     console.log(error);
+//   }
+// };
+
+module.exports = { signup };

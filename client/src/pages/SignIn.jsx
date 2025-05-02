@@ -21,7 +21,6 @@ export const SignIn = () => {
 
   const handleloginSubmit = (e) => {
     e.preventDefault();
-    
     alert(login);
   };
 

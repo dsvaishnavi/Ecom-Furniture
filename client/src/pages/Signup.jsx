@@ -9,7 +9,7 @@ export const Signup = () => {
     address: "",
     city: "",
     pin: "",
-    country: "",
+    state: "",
   });
 
   //   handling input value
@@ -205,15 +205,15 @@ export const Signup = () => {
           <div className="mb-6">
             <label
               className="block text-gray-700 text-sm font-bold mb-2"
-              htmlFor="country"
+              htmlFor="state"
             >
-              Country
+              state
             </label>
             <input
               type="text"
-              id="country"
-              name="country"
-              value={user.country}
+              id="state"
+              name="state"
+              value={user.state}
               onChange={handleInput}
               placeholder="Enter your country"
               className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
