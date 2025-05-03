@@ -79,22 +79,16 @@
             "description" : "Discover our stylish stool collection, featuring versatile designs for every space. From modern bar stools to comfortable accent stools, find the perfect seating options to enhance your home decor."
         },
         {
-            "id":13,
-            "name" : "Stool",
-            "image" : "https://img.freepik.com/premium-photo/png-modern-white-bar-stool-design_53876-699699.jpg?w=740",
-            "description" : "Discover our stylish stool collection, featuring versatile designs for every space. From modern bar stools to comfortable accent stools, find the perfect seating options to enhance your home decor."
+            "id":14,
+            "name" : "Wardrobe",
+            "image" : "https://www.ikea.com/in/en/images/products/pax-bergsbo-wardrobe-white-white__0649561_pe705624_s5.jpg",
+            "description" : "Organize your space with our stylish wardrobe collection. From modern designs to classic styles, find the perfect wardrobes to keep your clothing and accessories neatly stored."
         },
         {
-            "id":13,
-            "name" : "Stool",
-            "image" : "https://img.freepik.com/premium-photo/png-modern-white-bar-stool-design_53876-699699.jpg?w=740",
-            "description" : "Discover our stylish stool collection, featuring versatile designs for every space. From modern bar stools to comfortable accent stools, find the perfect seating options to enhance your home decor."
-        },
-        {
-            "id":13,
-            "name" : "Stool",
-            "image" : "https://img.freepik.com/premium-photo/png-modern-white-bar-stool-design_53876-699699.jpg?w=740",
-            "description" : "Discover our stylish stool collection, featuring versatile designs for every space. From modern bar stools to comfortable accent stools, find the perfect seating options to enhance your home decor."
+            "id":15,
+            "name" : "Outdoor Furniture",
+            "image" : "https://png.pngtree.com/thumb_back/fh260/background/20230705/pngtree-wooden-outdoor-furniture-set-in-a-garden-with-a-white-background-image_3792428.jpg",
+            "description" : "Transform your outdoor space with our stylish outdoor furniture collection. From comfortable loungers to elegant dining sets, find the perfect pieces to create a relaxing and inviting atmosphere."
         }
     ]
 }
