@@ -1,15 +1,11 @@
 import { useEffect, useState } from "react";
-// import { dotenv } from "dotenv";
-// dotenv.config();
 
 export const ImageHome = () => {
   const [images, setImages] = useState([]);
-  // const IMAGEAPI = process.env.REACT_APP_UNSPLASH_API;
-
+  const VITE_APP_UNSPLASH_API = import.meta.env.VITE_APP_UNSPLASH_API;
+  
   useEffect(() => {
-    fetch(
-      `https://api.unsplash.com/search/photos?query=furniture&per_page=18&client_id=ZmN_8OeBsphKWWdlG4m25aecFL27dalv0vdcPayFVtQ`
-    )
+    fetch(VITE_APP_UNSPLASH_API)
       .then((res) => {
         if (!res.ok) {
           throw new Error("Network response was not ok " + res.statusText);
@@ -18,7 +14,6 @@ export const ImageHome = () => {
       })
       .then((res) => res.json())
       .then((data) => setImages(data.results)) // Note: results is an array
-
       .catch((err) => console.error("Error fetching images:", err));
   }, []);
 
@@ -29,7 +24,6 @@ export const ImageHome = () => {
           What's New at UrbanNest..?
         </h1>   
       </div>
-
       <div className="md:columns-3 lg:columns-4 gap-4 p-4 min-h-screen">
         {images.map((img) => (
           <img
@@ -37,8 +31,7 @@ export const ImageHome = () => {
             src={img.urls.small}
             alt={img.alt_description || "Random Unsplash"}
             className="mb-3 w-full hover:scale-105 rounded-sm transition duration-200 ease-in"
-          />
-          
+          />          
         ))}
         <h1 className="text-4xl text-center ml-5 mb-5 font-bold animate-scroll inline-block text-[#523a28] mt-7 ">
           Explore Our Collections....
