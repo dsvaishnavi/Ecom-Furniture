@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
-// import dotenv from "dotenv";d
+// import { dotenv } from "dotenv";
 // dotenv.config();
 
 export const ImageHome = () => {
   const [images, setImages] = useState([]);
-  // used unsplash for furniture image
-  // const unsplash_client = process.env.UNSPLASH_CLIENT_ID;
+  // const IMAGEAPI = process.env.REACT_APP_UNSPLASH_API;
+
   useEffect(() => {
     fetch(
       `https://api.unsplash.com/search/photos?query=furniture&per_page=18&client_id=ZmN_8OeBsphKWWdlG4m25aecFL27dalv0vdcPayFVtQ`
