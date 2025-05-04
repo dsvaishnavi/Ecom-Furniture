@@ -166,14 +166,7 @@ export const Footer = () => {
               className="text-[#f5e8d0] hover:text-white transition"
             >
               Shipping Information
-            </a>
-            <span className="text-[#f5e8d0]">|</span>
-            <a
-              href="#"
-              className="text-[#f5e8d0] hover:text-white transition"
-            >
-              FAQs
-            </a>
+            </a>           
           </div>
         </div>
 
@@ -183,5 +176,5 @@ export const Footer = () => {
         </div>
       </div>
     </footer>
-  );
-};
+  )
+}

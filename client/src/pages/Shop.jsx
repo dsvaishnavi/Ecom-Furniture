@@ -1,8 +1,6 @@
 export const Shop=()=>{
     return (
-        <>
-        <h1>shop page</h1>
-        <p>here is the Shoping page is</p>
-        </>
+       <div className="flex flex-col items-center justify-center min-h-screen bg-[#f5e8d0]">
+      </div>
     )
 }

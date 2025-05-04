@@ -7,12 +7,9 @@ export const Applayout = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
-
-      {/* Add pt-[header-height] to push content down */}
-      <main className=" pt-20 ">
+      <main className="pt-0 w-full ">
         <Outlet />
       </main>
-
       <Footer />
     </div>
   );
