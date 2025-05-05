@@ -6,15 +6,18 @@ const signup = async (req, res) => {
   try {
     const { username, email, password, phone, address, city, pin, state } =
       req.body;
-    const user = await Usermodel.findOne({ email });
-    if (user) {
+    // ----------------------------------------email exist or not
+    const userExist = await Usermodel.findOne({ email });
+    if (userExist) {
       return res
         .status(409)
         .json({ message: "user already exist", success: false });
     }
+
+    const hashedPass = await bcrypt.hash(password, 10); //bcrypt make the password hash and secure.
     const data = await Usermodel.create({
       username,
-      password,
+      password: hashedPass,
       email,
       phone,
       address,
@@ -22,14 +25,15 @@ const signup = async (req, res) => {
       pin,
       state,
     });
-    data.password = await bcrypt.hash(password, 10);
-    await Usermodel.save();
+
+    await data.save();
     console.log(username, password);
-    res.json({
-      message: "usersignup success",
+    res.status(201).json({
+      message: "User signup success",
+      success: true,
     });
   } catch (error) {
-    console.log(error);
+    console.log("wrong");
   }
 };
 // -----------------------------------------------------------------signin----------------------------------------------------------------------

@@ -8,6 +8,7 @@ import { SignIn } from "./pages/SignIn";
 import { Home } from "./pages/Home";
 import { Signup } from "./pages/Signup";
 
+
 const router = createBrowserRouter([
   {
     path: "/",

@@ -29,3 +29,6 @@
 
  # for validation
  npm i joi
+
+ # used toastify for the pop up message
+ npm i toastify 

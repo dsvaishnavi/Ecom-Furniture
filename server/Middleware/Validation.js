@@ -25,9 +25,13 @@ const signupValidation = (req, res, next) => {
 
   const { error } = Schema.validate(req.body);
   if (error) {
-    return res.status(400).json({ message: "Bad request", error });
+    console.log("Validation error:", error.details);
+    return res
+      .status(400)
+      .json({ message: "Bad request", error: error.details });
+  } else {
+    next();
   }
-  next();
 };
 
 const signinValidation = (req, res, next) => {
