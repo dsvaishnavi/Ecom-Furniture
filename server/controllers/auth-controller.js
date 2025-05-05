@@ -7,7 +7,9 @@ const signup = async (req, res) => {
     const { username, email, password, phone, address, city, pin, state } =
       req.body;
     // ----------------------------------------email exist or not
-    const userExist = await Usermodel.findOne({ email,username });
+    const userExist = await Usermodel.findOne({
+      $or: [{ email }, { username }],
+    });
     if (userExist) {
       return res
         .status(409)
@@ -40,9 +42,10 @@ const signup = async (req, res) => {
 
 const signIn = async (req, res) => {
   try {
-    const { email, password, username } = req.body;
+    const { email, username, password } = req.body;
     const user = await Usermodel.findOne({
-    email,username
+      email,
+      username,
     });
     const errorMsg = "wrong in signin";
     if (!user) {
