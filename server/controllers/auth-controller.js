@@ -6,15 +6,20 @@ const signup = async (req, res) => {
   try {
     const { username, email, password, phone, address, city, pin, state } =
       req.body;
-    const user = await Usermodel.findOne({ email });
-    if (user) {
+    // ----------------------------------------email exist or not
+    const userExist = await Usermodel.findOne({
+      $or: [{ email }, { username }],
+    });
+    if (userExist) {
       return res
         .status(409)
         .json({ message: "user already exist", success: false });
     }
+
+    const hashedPass = await bcrypt.hash(password, 10); //bcrypt make the password hash and secure.
     const data = await Usermodel.create({
       username,
-      password,
+      password: hashedPass,
       email,
       phone,
       address,
@@ -22,35 +27,42 @@ const signup = async (req, res) => {
       pin,
       state,
     });
-    data.password = await bcrypt.hash(password, 10);
-    await Usermodel.save();
+
+    await data.save();
     console.log(username, password);
-    res.json({
-      message: "usersignup success",
+    res.status(201).json({
+      message: "User signup success",
+      success: true,
     });
   } catch (error) {
-    console.log(error);
+    console.log("wrong");
   }
 };
 // -----------------------------------------------------------------signin----------------------------------------------------------------------
 
-const signin = async (req, res) => {
+const signIn = async (req, res) => {
   try {
-    const { email, password } = req.body;
-    const user = await Usermodel.findOne({ email });
-    const errorMsg = "wrong validation";
+    const { email, username, password } = req.body;
+    const user = await Usermodel.findOne({
+      email,
+      username,
+    });
+    const errorMsg = "wrong in signin";
     if (!user) {
       return res.status(403).json({ message: errorMsg, success: false });
     }
-    const isSame = await bcrypt.compare(password, user.password); //password is from client and user.pass from database
-
-    if (!isSame) {
+    const ispassequal = await bcrypt.compare(password, user.password);
+    if (!ispassequal) {
       return res.status(403).json({ message: errorMsg, success: false });
     }
+    // const checkuser = await Usermodel.findOne({ username });
+    // if (!checkuser) {
+    //   return res.status(403).json({ message: errorMsg, success: false });
+    // }
 
     // -----------------------------------------------------JWT TOKEN--------------------------------------------------------------------------------
     const jwtToken = jwt.sign(
-      { email: user.email, _id: user._id },
+      { email: user.email, _id: user._id }, //payload,secret_key,expiresIn
       process.env.JWT_SECRET,
       { expiresIn: "24h" }
     );
@@ -60,12 +72,12 @@ const signin = async (req, res) => {
       message: "signIN successfull",
       success: true,
       jwtToken,
-      email,
-      name: user.username,
+      email: user.email,
+      username: user.username,
     });
   } catch (error) {
     console.log(error);
   }
 };
 
-module.exports = { signup, signin };
+module.exports = { signup, signIn };

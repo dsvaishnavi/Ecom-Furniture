@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { handleerror, handlesuccess } from "../utils";
+import { useNavigate } from "react-router-dom";
 
 export const Signup = () => {
   const [user, setUser] = useState({
@@ -11,6 +13,7 @@ export const Signup = () => {
     pin: "",
     state: "",
   });
+  const navigate = useNavigate();
 
   //   handling input value
   const handleInput = (e) => {
@@ -28,7 +31,20 @@ export const Signup = () => {
   // handle form submit
   const handleSubmit = async (e) => {
     e.preventDefault();
-    alert("Sign-up succesfull");
+    const { username, email, password, phone, address, city, pin, state } =
+      user;
+    if (
+      !username ||
+      !email ||
+      !password ||
+      !phone ||
+      !address ||
+      !city ||
+      !pin ||
+      !state
+    ) {
+      return handleerror("All fields required please enter all details.");
+    }
 
     try {
       const response = await fetch("http://localhost:3000/api/auth/signup", {
@@ -39,9 +55,19 @@ export const Signup = () => {
         body: JSON.stringify(user),
       });
 
-      console.log(response);
-    } catch (error) {
-      console.log(error.message);
+      const data = await response.json();
+      const { success, message, error } = data;
+      if (success) {
+        handlesuccess(message);
+        setTimeout(() => {
+          navigate("/signIn"); //the '/ will get you to home page and /signin get you to signin page'
+        }, 1000);
+      } else if (error) {
+        const details = error?.[0]?.message || "Something went wrong";
+        handleerror(details);
+      }
+    } catch (err) {
+      handleerror(err);
     }
   };
   return (
@@ -238,7 +264,7 @@ export const Signup = () => {
                             focus:outline-none 
                             focus:ring-2 
                             focus:ring-white"
-              type="button"
+              type="submit"
               onClick={handleSubmit}
             >
               SignUp

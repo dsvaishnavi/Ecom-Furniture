@@ -12,7 +12,7 @@ const corsOption = {
   credentials: true,
 };
 
-app.use(bodyParser.json());
+// app.use(bodyParser.json());
 app.use(cors(corsOption));
 
 // to handle json value in request body it's called middleware
@@ -25,6 +25,6 @@ const PORT = 3000;
 // if the connection builds sucessfully then only start the port
 connectdb().then(() => {
   app.listen(PORT, () => {
-    console.log("server running ");
+    console.log(` ${PORT} server running `);
   });
 });

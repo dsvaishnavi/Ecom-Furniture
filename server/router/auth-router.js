@@ -7,6 +7,6 @@ const {
 } = require("../Middleware/Validation");
 
 router.post("/signup", signupValidation, authcontroller.signup);
-router.post("/signin", signinValidation, authcontroller.signin);
+router.post("/signIn", signinValidation, authcontroller.signIn);
 
 module.exports = router;
