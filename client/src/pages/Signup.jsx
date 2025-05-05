@@ -60,7 +60,7 @@ export const Signup = () => {
       if (success) {
         handlesuccess(message);
         setTimeout(() => {
-          navigate("/"); //the '/ will get you to home page and /signin get you to singin page'
+          navigate("/signIn"); //the '/ will get you to home page and /signin get you to signin page'
         }, 1000);
       } else if (error) {
         const details = error?.[0]?.message || "Something went wrong";

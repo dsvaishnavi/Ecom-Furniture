@@ -7,7 +7,7 @@ const signup = async (req, res) => {
     const { username, email, password, phone, address, city, pin, state } =
       req.body;
     // ----------------------------------------email exist or not
-    const userExist = await Usermodel.findOne({ email });
+    const userExist = await Usermodel.findOne({ email,username });
     if (userExist) {
       return res
         .status(409)
@@ -38,23 +38,28 @@ const signup = async (req, res) => {
 };
 // -----------------------------------------------------------------signin----------------------------------------------------------------------
 
-const signin = async (req, res) => {
+const signIn = async (req, res) => {
   try {
-    const { email, password } = req.body;
-    const user = await Usermodel.findOne({ email });
-    const errorMsg = "wrong validation";
+    const { email, password, username } = req.body;
+    const user = await Usermodel.findOne({
+    email,username
+    });
+    const errorMsg = "wrong in signin";
     if (!user) {
       return res.status(403).json({ message: errorMsg, success: false });
     }
-    const isSame = await bcrypt.compare(password, user.password); //password is from client and user.pass from database
-
-    if (!isSame) {
+    const ispassequal = await bcrypt.compare(password, user.password);
+    if (!ispassequal) {
       return res.status(403).json({ message: errorMsg, success: false });
     }
+    // const checkuser = await Usermodel.findOne({ username });
+    // if (!checkuser) {
+    //   return res.status(403).json({ message: errorMsg, success: false });
+    // }
 
     // -----------------------------------------------------JWT TOKEN--------------------------------------------------------------------------------
     const jwtToken = jwt.sign(
-      { email: user.email, _id: user._id },
+      { email: user.email, _id: user._id }, //payload,secret_key,expiresIn
       process.env.JWT_SECRET,
       { expiresIn: "24h" }
     );
@@ -64,12 +69,12 @@ const signin = async (req, res) => {
       message: "signIN successfull",
       success: true,
       jwtToken,
-      email,
-      name: user.username,
+      email: user.email,
+      username: user.username,
     });
   } catch (error) {
     console.log(error);
   }
 };
 
-module.exports = { signup, signin };
+module.exports = { signup, signIn };
