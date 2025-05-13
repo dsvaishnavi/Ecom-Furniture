@@ -8,5 +8,6 @@ const {
 
 router.post("/signup", signupValidation, authcontroller.signup);
 router.post("/signIn", signinValidation, authcontroller.signIn);
-
+router.post("/otp", authcontroller.verify_email); 
+router.post("/resend-otp", authcontroller.resendOtp);
 module.exports = router;

@@ -25,6 +25,6 @@ const PORT = 3000;
 // if the connection builds sucessfully then only start the port
 connectdb().then(() => {
   app.listen(PORT, () => {
-    console.log(` ${PORT} server running `);
+    console.log(`Server is Running on Port No : ${PORT} Be Carefull `);
   });
 });

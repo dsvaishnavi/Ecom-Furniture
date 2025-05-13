@@ -7,6 +7,7 @@ import { Profile } from "./pages/Profile";
 import { SignIn } from "./pages/SignIn";
 import { Home } from "./pages/Home";
 import { Signup } from "./pages/Signup";
+import { Verify_Otp } from "./pages/Verify_Otp";
 
 const router = createBrowserRouter([
   {
@@ -43,14 +44,18 @@ const router = createBrowserRouter([
         path: "/home",
         element: <Home />,
       },
+       {
+        path: "/verify_otp",
+        element: <Verify_Otp />,
+      },
     ],
   },
-]);
+])
 
 const App = () => {
   return (
     <>
-      <RouterProvider router={router}> </RouterProvider>;
+      <RouterProvider router={router}> </RouterProvider>
     </>
   );
 };

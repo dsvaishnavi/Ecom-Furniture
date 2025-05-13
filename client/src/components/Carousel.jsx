@@ -37,7 +37,7 @@ export const Carousel = () => {
                     Discover your new{" "}
                     <span className="text-[#fffaf5]">space !!</span>
                   </h2>
-                  <h1 className="text-2xl px-10 font-bold uppercase line-clamp-5 w-500px md:w-[900px] text-black">
+                  <h1 className="text-2xl px-10 font-bold uppercase line-clamp-5 w-500px md:w-[1000px] text-black">
                     {item.title}
                   </h1>
                   <p className="md:w-[500px] px-10 line-clamp-4 text-2xl text-black">
@@ -72,14 +72,15 @@ export const Carousel = () => {
                   <img
                     src={item.image}
                     alt={item.title}
-                    className=" w-[290px] h-auto hover:scale-105 transition-all shadow-black"
+                    className=" w-[290px] h-auto hover:scale-105 transition-all shadow
+                    -black"
                   />
                 </div>
               </div>
             </div>
-          );
+          )
         })}
       </Slider>
     </>
-  );
-};
+  )
+}

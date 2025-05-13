@@ -34,7 +34,25 @@ const User = new Schema({
     type: String,
     required: true,
   },
-});
+  isVerified:{
+    type:Boolean,
+    default : false
+  },
+  isAdmin:{
+    type:Boolean,
+    default:false
+  },
+  otp:{
+    type: String
+  },
+  otpExpires:{
+    type: Date
+  },
+  date:{
+    type:Date,
+    default:Date.now
+  }
+},{timestamps:true});
 
 const Usermodel = mongoose.model("User", User);
 module.exports = { Usermodel };

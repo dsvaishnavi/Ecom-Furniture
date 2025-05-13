@@ -8,5 +8,5 @@ export const Home = () => {
       <CategoryList></CategoryList>
       <ImageHome></ImageHome>
     </>
-  );
+  )
 };

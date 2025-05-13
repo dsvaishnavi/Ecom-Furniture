@@ -29,47 +29,38 @@ export const Signup = () => {
   };
 
   // handle form submit
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    const { username, email, password, phone, address, city, pin, state } =
-      user;
-    if (
-      !username ||
-      !email ||
-      !password ||
-      !phone ||
-      !address ||
-      !city ||
-      !pin ||
-      !state
-    ) {
-      return handleerror("All fields required please enter all details.");
-    }
+// Update the handleSubmit function in Signup.jsx
+const handleSubmit = async (e) => {
+  e.preventDefault();
+  const { username, email, password, phone, address, city, pin, state } = user;
 
-    try {
-      const response = await fetch("http://localhost:3000/api/auth/signup", {
-        method: "POST",
-        headers: {
-          "Content-type": "application/json",
-        },
-        body: JSON.stringify(user),
-      });
+  if (!username || !email || !password || !phone || !address || !city || !pin || !state) {
+    handleerror("Please fill all the fields");
+    return;
+  }
 
-      const data = await response.json();
-      const { success, message, error } = data;
-      if (success) {
-        handlesuccess(message);
-        setTimeout(() => {
-          navigate("/signIn"); //the '/ will get you to home page and /signin get you to signin page'
-        }, 1000);
-      } else if (error) {
-        const details = error?.[0]?.message || "Something went wrong";
-        handleerror(details);
-      }
-    } catch (err) {
-      handleerror(err);
+  try {
+    const res = await fetch("http://localhost:3000/api/auth/signup", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(user),
+    });
+
+    const data = await res.json();
+    if (data.success) {
+      handlesuccess("Signup Successful! Please verify OTP.");
+      navigate("/verify_otp", { state: { email: user.email } }); // Pass email via state
+    } else {
+      handleerror(data.message || "Signup Failed");
     }
-  };
+  } catch (err) {
+    console.error("Signup Error:", err);
+    handleerror("Server Error. Try again later.");
+  }
+};
+
   return (
     <div className="flex flex-col items-center justify-center h-200 bg-[#f5e8d0] w-full ">
       <div className="bg-white shadow-md rounded px-8 pt-6 pb-8  w-1/2 mb-20 mt-20">
@@ -77,7 +68,7 @@ export const Signup = () => {
           <img
             src="./1.png"
             alt="Logo"
-            className="h-20 w-20 mr-2 rounded-full"
+            className="h-10 w-10 mr-2 rounded-full"
           />
           <h1 className="text-4xl font-bold text-[#917337]">UrbanNest</h1>
         </div>
@@ -102,6 +93,9 @@ export const Signup = () => {
               placeholder="Enter your username"
               className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             />
+          </div>
+          <div>
+            
           </div>
           <div className="mb-4">
             <label

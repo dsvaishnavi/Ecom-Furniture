@@ -1,7 +1,7 @@
 export const Profile=()=>{
     return(
         <>
-        <h1>Profile</h1>
+        <h1 className="w-[300px]">Profile</h1>
         </>
     )
 }

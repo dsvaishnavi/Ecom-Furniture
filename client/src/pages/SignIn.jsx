@@ -60,16 +60,16 @@ export const SignIn = () => {
   };
   return (
     <div className="flex flex-col items-center justify-center h-200 bg-[#f5e8d0] w-full ">
-      <div className="bg-white shadow-md rounded px-8 pt-8 pb-8  w-[30%] mb-20 mt-20">
+      <div className="bg-white shadow-md rounded px-8 pt-8 pb-8 w-[90%] mb-20 mt-20 md:w-[50%] lg:w-[30%]">
         <div className="flex items-center justify-center mb-8">
           <img
             src="./1.png"
             alt="Logo"
-            className="h-20 w-20 mr-2 rounded-full"
+            className="h-10 w-10 mr-2 rounded-full"
           />
-          <h1 className="text-4xl font-bold text-[#917337]">UrbanNest</h1>
+          <h1 className="text-2xl font-bold text-[#917337] md: ">UrbanNest</h1>
         </div>
-        <h1 className="text-4xl font-bold text-center mt-10 mb-6">
+        <h1 className="text-3xl font-bold text-center mt-10 mb-6">
           Welcome Back!
         </h1>
         {/* <p className="text-lg text-gray-600 text-center mt-2 mb-6">

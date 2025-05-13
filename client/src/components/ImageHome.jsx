@@ -2,12 +2,15 @@ import { useEffect, useState } from "react";
 
 export const ImageHome = () => {
   const [images, setImages] = useState([]);
-  // const VITE_APP_UNSPLASH_API = import.meta.env.VITE_APP_UNSPLASH_API;
+  const VITE_APP_UNSPLASH_API = import.meta.env.VITE_APP_UNSPLASH_API;
   const UNSPLASH_API =
     "https://api.unsplash.com/search/photos?query=furniture&per_page=15&page=1&client_id=ZmN_8OeBsphKWWdlG4m25aecFL27dalv0vdcPayFVtQ";
 
   useEffect(() => {
-    fetch(UNSPLASH_API)
+    fetch(
+      // UNSPLASH_API,
+      VITE_APP_UNSPLASH_API
+    )
       .then((res) => {
         if (!res.ok) {
           throw new Error("Network response was not ok " + res.statusText);
