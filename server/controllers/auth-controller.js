@@ -141,7 +141,6 @@ const signIn = async (req, res) => {
   }
 };
 
-// Add this new controller function
 const resendOtp = async (req, res) => {
   try {
     const { email } = req.body;

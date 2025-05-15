@@ -1,12 +1,13 @@
 const nodemailer = require("nodemailer");
+require("dotenv").config();
 
 const transporter = nodemailer.createTransport({
   host: "smtp.gmail.com",
   port: 465,
   secure: true, // true for 465, false for other ports
   auth: {
-    user: "sattudesai007@gmail.com",
-    pass: "iueexpkgjvyjrnkp",
+    user: process.env.EMAIL,
+    pass: process.env.EMAILPASS,
   },
 });
 
@@ -14,7 +15,7 @@ const sendEmail = async (to, subject, text, html) => {
   try {
     // Send mail with defined transport object
     const info = await transporter.sendMail({
-      from: `"UrbanNest" <sattudesai007@gmail.com}>`,
+      from: `"UrbanNest" <process.env.EMAIL>`,
       to,
       subject,
       text,
@@ -30,6 +31,3 @@ const sendEmail = async (to, subject, text, html) => {
 };
 
 module.exports = { sendEmail };
-
-
-
