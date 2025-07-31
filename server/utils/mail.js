@@ -1,6 +1,5 @@
 const nodemailer = require("nodemailer");
 require("dotenv").config();
-
 const transporter = nodemailer.createTransport({
   host: "smtp.gmail.com",
   port: 465,
@@ -10,7 +9,6 @@ const transporter = nodemailer.createTransport({
     pass: process.env.EMAILPASS,
   },
 });
-
 const sendEmail = async (to, subject, text, html) => {
   try {
     // Send mail with defined transport object
@@ -21,7 +19,6 @@ const sendEmail = async (to, subject, text, html) => {
       text,
       html,
     });
-
     console.log("Message sent: %s", info.messageId);
     return { success: true, messageId: info.messageId };
   } catch (error) {
@@ -29,5 +26,4 @@ const sendEmail = async (to, subject, text, html) => {
     return { success: false, error: error.message };
   }
 };
-
 module.exports = { sendEmail };
